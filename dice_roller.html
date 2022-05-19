@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dice Simulator 2015</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>  
+<body>
+    <div class="w3-text-white w3-black">
+        <header>
+            <h1>
+                Il Fuoco dei Re
+            </h1>
+            <h3>
+                Il LanciaDadi ufficiale della campagna
+            </h3>
+            by <a href="https://github.com/jschiavon">jschiavon</a>
+        </header>
+
+        <div class="w3-sidebar w3-bar-block w3-black" style="width:50%;right:5px">
+            <img src="iFdR.jpg" alt="Affiche" style="width:95%">
+            <p>Image credits to <a href="https://www.instagram.com/itspapaz/">@itspapaz</a></p>
+        </div>
+        
+        <div style="margin-left:5px;margin-right:50%;width:50%">
+
+            <button onclick="document.getElementById('input_form').style.display='block'" class="w3-section w3-button w3-large">Inserisci dati</button>
+
+            <div class="w3-section w3-row">
+                <div class="w3-container w3-half">
+                    <ul class="w3-ul w3-card-4">
+                        <li class="w3-bar w3-border-red w3-row">
+                            <button id="d20" class="w3-bar-item w3-button w3-half" onclick="rolld20('attacco');"><i class ="fa-solid fa-dice-d20"> Attacco</i></button>
+                            <div class="w3-bar-item w3-half">
+                                <span id="attacco" class="w3-large w3-centered">0</span>
+                            </div>
+                        </li>
+        
+                        <li class="w3-bar w3-border-red w3-row">
+                            <button id="d20" class="w3-bar-item w3-button w3-half" onclick="rolld20('secondario');"><i class ="fa-solid fa-dice-d20"> Secondario</i></button>
+                            <div class="w3-bar-item w3-half">
+                                <span id="secondario" class=" w3-large w3-centered">0</span>
+                            </div>
+                        </li>
+        
+                        <li class="w3-bar w3-border-red w3-row">
+                            <button id="d20" class="w3-bar-item w3-button w3-half" onclick="rolld20('iniziativa');"><i class ="fa-solid fa-dice-d20"> Iniziativa</i></button>
+                            <div class="w3-bar-item w3-half">
+                                <span id="iniziativa" class=" w3-large w3-centered">0</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w3-container w3-half">
+                    <ul class="w3-ul w3-card-4">
+                        <li class="w3-bar w3-border-red w3-row">
+                            <button id="d20" class="w3-bar-item w3-button w3-half" onclick="rolld20('armatura');"><i class ="fa-solid fa-dice-d20"> Armatura</i></button>
+                            <div class="w3-bar-item w3-half">
+                                <span id="armatura" class="w3-large w3-centered">0</span>
+                            </div>
+                        </li>
+        
+                        <li class="w3-bar w3-border-red w3-row">
+                            <button id="d20" class="w3-bar-item w3-button w3-half" onclick="rolld20('fisico');"><i class ="fa-solid fa-dice-d20"> Fisico</i></button>
+                            <div class="w3-bar-item w3-half">
+                                <span id="fisico" class="w3-large w3-centered">0</span>
+                            </div>
+                        </li>
+        
+                        <li class="w3-bar w3-border-red w3-row">
+                            <button id="d20" class="w3-bar-item w3-button w3-half" onclick="rolld20('spirito');"><i class ="fa-solid fa-dice-d20">  Spirito</i></button>
+                            <div class="w3-bar-item w3-half">
+                                <span id="spirito" class="w3-large w3-centered">0</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+        
+            </div>
+    
+            <div class="w3-section">
+                <p id="placeholder">
+                    
+                </p>
+            </div>
+
+            <div class="w3-section">
+                <p id="fullresult">
+                    
+                </p>
+            </div>
+            
+
+        </div>
+        
+        
+    </div>
+    
+    <div id="input_form" class="w3-modal">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="width:30%;">            
+            <header class="w3-container">
+                <span onclick="document.getElementById('input_form').style.display='none'"
+                class="w3-button w3-display-topright">&times;</span>
+                <h2>Inserisci dati del PG</h2>
+            </header>
+
+            <div class="w3-cell-row">
+                <div class="w3-container w3-cell">
+                    <ul class="w3-ul w3-card-4 ">
+                        <li class="w3-bar w3-border-red">
+                            <label class="w3-bar-item">Attacco</button>
+                            <div class="w3-bar-item">
+                                <input id="attacco_inpt" class="w3-input w3-border w3-round-large" type="text" placeholder="0" value="0">
+                            </div>
+                        </li>
+        
+                        <li class="w3-bar w3-border-red">
+                            <label class="w3-bar-item">Secondario</button>
+                            <div class="w3-bar-item">
+                                <input id="secondario_inpt" class="w3-input w3-border w3-round-large" type="text" placeholder="0" value="0">
+                            </div>
+                        </li>
+        
+                        <li class="w3-bar w3-border-red">
+                            <label class="w3-bar-item">Iniziativa</button>
+                            <div class="w3-bar-item">
+                                <input id="iniziativa_inpt" class="w3-input w3-border w3-round-large" type="text" placeholder="0" value="0">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w3-container w3-cell">
+                    <ul class="w3-ul w3-card-4">
+                        <li class="w3-bar w3-border-red">
+                            <label class="w3-bar-item">Armatura</button>
+                            <div class="w3-bar-item">
+                                <input id="armatura_inpt" class="w3-input w3-border w3-round-large" type="text" placeholder="0" value="0">
+                            </div>
+                        </li>
+        
+                        <li class="w3-bar w3-border-red">
+                            <label class="w3-bar-item">Fisico</button>
+                            <div class="w3-bar-item">
+                                <input id="fisico_inpt" class="w3-input w3-border w3-round-large" type="text" placeholder="0" value="0">
+                            </div>
+                        </li>
+        
+                        <li class="w3-bar w3-border-red">
+                            <label class="w3-bar-item">Spirito</button>
+                            <div class="w3-bar-item">
+                                <input id="spirito_inpt" class="w3-input w3-border w3-round-large" type="text" placeholder="0" value="0">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <footer class="w3-container">
+                <button class="w3-button" onclick="applyinputs();">Salva</button>
+            </footer>
+  
+        </div>
+    </div>
+
+    
+    
+
+  <script src="dice_roller.js"></script>
+  
+</body>
+</html>
