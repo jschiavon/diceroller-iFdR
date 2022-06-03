@@ -26,7 +26,11 @@ function applyinputs(){
     for (i = 0; i < valori.length; i++){
         x = document.getElementById(valori[i]);
         y = document.getElementById(valori[i] + "_inpt");
-        x.innerHTML = y.value;
+        if (!y.value){
+            x.innerHTML = "0";    
+        } else {
+            x.innerHTML = y.value;
+        }
     }
     document.getElementById('input_form').style.display='none';
 }  
