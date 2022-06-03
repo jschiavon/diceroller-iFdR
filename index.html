@@ -26,7 +26,7 @@
         
         <div class="w3-section w3-mobile">
 
-            <button onclick="document.getElementById('input_form').style.display='block'" class="w3-section w3-button w3-large w3-black w3-opacity-min">
+            <button onclick="document.getElementById('input_form').style.display='block'" class="w3-section w3-button w3-round w3-large w3-black w3-opacity-min">
                 Inserisci dati
             </button>
 
@@ -123,75 +123,43 @@
         
     </div>
     
-    <div id="input_form" class="w3-modal">
-        <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="width:30%;">            
+    <div id="input_form" class="w3-modal w3-mobile">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom bg-image" style="width:30%;">            
             <header class="w3-container">
                 <span onclick="document.getElementById('input_form').style.display='none'"
                 class="w3-button w3-display-topright">&times;</span>
                 <h2>Inserisci dati del PG</h2>
             </header>
 
-            <div class="w3-cell-row">
-                <div class="w3-container w3-cell">
-                    <ul class="w3-ul w3-card-4 ">
-                        <li class="w3-bar w3-border-red">
-                            <label class="w3-bar-item">Attacco</button>
-                            <div class="w3-bar-item">
-                                <input id="attacco_inpt" class="w3-input w3-border w3-round-large" type="text" placeholder="0" value="0">
-                            </div>
-                        </li>
-        
-                        <li class="w3-bar w3-border-red">
-                            <label class="w3-bar-item">Secondario</button>
-                            <div class="w3-bar-item">
-                                <input id="secondario_inpt" class="w3-input w3-border w3-round-large" type="text" placeholder="0" value="0">
-                            </div>
-                        </li>
-        
-                        <li class="w3-bar w3-border-red">
-                            <label class="w3-bar-item">Iniziativa</button>
-                            <div class="w3-bar-item">
-                                <input id="iniziativa_inpt" class="w3-input w3-border w3-round-large" type="text" placeholder="0" value="0">
-                            </div>
-                        </li>
+            <div class="w3-card-4 w3-black w3-opacity-min">
+                <form class="w3-container">
 
-                        <li class="w3-bar w3-border-red">
-                            <label class="w3-bar-item">Fortuna</button>
-                            <div class="w3-bar-item">
-                                <input id="fortuna_inpt" class="w3-input w3-border w3-round-large" type="text" placeholder="0" value="0">
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
-                <div class="w3-container w3-cell">
-                    <ul class="w3-ul w3-card-4">
-                        <li class="w3-bar w3-border-red">
-                            <label class="w3-bar-item">Armatura</button>
-                            <div class="w3-bar-item">
-                                <input id="armatura_inpt" class="w3-input w3-border w3-round-large" type="text" placeholder="0" value="0">
-                            </div>
-                        </li>
-        
-                        <li class="w3-bar w3-border-red">
-                            <label class="w3-bar-item">Fisico</button>
-                            <div class="w3-bar-item">
-                                <input id="fisico_inpt" class="w3-input w3-border w3-round-large" type="text" placeholder="0" value="0">
-                            </div>
-                        </li>
-        
-                        <li class="w3-bar w3-border-red">
-                            <label class="w3-bar-item">Spirito</button>
-                            <div class="w3-bar-item">
-                                <input id="spirito_inpt" class="w3-input w3-border w3-round-large" type="text" placeholder="0" value="0">
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                    <label>Attacco</label>
+                    <input id="attacco_inpt" class="w3-input w3-border-red w3-round-large" type="text" placeholder="0" value="0">
+                    
+                    <label>Secondario</label>
+                    <input id="secondario_inpt" class="w3-input w3-border-red w3-round-large" type="text" placeholder="0" value="0">
+                    
+                    <label>Iniziativa</label>
+                    <input id="iniziativa_inpt" class="w3-input w3-border-red w3-round-large" type="text" placeholder="0" value="0">
+                    
+                    <label>Armatura</label>
+                    <input id="armatura_inpt" class="w3-input w3-border-red w3-round-large" type="text" placeholder="0" value="0">
+                    
+                    <label>Fisico</label>
+                    <input id="fisico_inpt" class="w3-input w3-border-red w3-round-large" type="text" placeholder="0" value="0">
+                    
+                    <label>Spirito</label>
+                    <input id="spirito_inpt" class="w3-input w3-border-red w3-round-large" type="text" placeholder="0" value="0">
+                    
+                    <label>Fortuna</label>
+                    <input id="fortuna_inpt" class="w3-input w3-border-red w3-round-large" type="text" placeholder="0" value="0">
+                    
+                    </form>
             </div>
-        
+            
             <footer class="w3-container">
-                <button class="w3-button" onclick="applyinputs();">Salva</button>
+                <button class="w3-button w3-large w3-red w3-round-large w3-opacity-min" onclick="applyinputs();">Salva</button>
             </footer>
   
         </div>
