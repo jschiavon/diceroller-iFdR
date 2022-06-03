@@ -33,47 +33,78 @@
                 <div class="w3-container w3-half">
                     <ul class="w3-ul w3-card-4">
                         <li class="w3-bar w3-border-red w3-row">
-                            <button id="d20" class="w3-bar-item w3-button w3-half" onclick="rolld20('attacco');"><i class ="fa-solid fa-dice-d20"> Attacco</i></button>
+                            <button id="d20" class="w3-bar-item w3-button w3-half w3-large" onclick="rolld20('attacco');">
+                                <i class ="fa-solid fa-dice-d20"></i> Attacco
+                            </button>
                             <div class="w3-bar-item w3-half">
                                 <span id="attacco" class="w3-large w3-centered">0</span>
                             </div>
                         </li>
         
                         <li class="w3-bar w3-border-red w3-row">
-                            <button id="d20" class="w3-bar-item w3-button w3-half" onclick="rolld20('secondario');"><i class ="fa-solid fa-dice-d20"> Secondario</i></button>
+                            <button id="d20" class="w3-bar-item w3-button w3-half w3-large" onclick="rolld20('secondario');">
+                                <i class ="fa-solid fa-dice-d20"></i> Secondario
+                            </button>
                             <div class="w3-bar-item w3-half">
                                 <span id="secondario" class=" w3-large w3-centered">0</span>
                             </div>
                         </li>
         
                         <li class="w3-bar w3-border-red w3-row">
-                            <button id="d20" class="w3-bar-item w3-button w3-half" onclick="rolld20('iniziativa');"><i class ="fa-solid fa-dice-d20"> Iniziativa</i></button>
+                            <button id="d20" class="w3-bar-item w3-button w3-half w3-large" onclick="rolld20('iniziativa');">
+                                <i class ="fa-solid fa-dice-d20"></i> Iniziativa
+                            </button>
                             <div class="w3-bar-item w3-half">
                                 <span id="iniziativa" class=" w3-large w3-centered">0</span>
                             </div>
                         </li>
+
+                        <li class="w3-bar w3-border-red w3-row">
+                            <button id="d20" class="w3-bar-item w3-button w3-half w3-large" onclick="rolld20('fortuna');">
+                                <i class ="fa-solid fa-dice-d20"></i> Fortuna
+                            </button>
+                            <div class="w3-bar-item w3-half">
+                                <span id="fortuna" class=" w3-large w3-centered">0</span>
+                            </div>
+                        </li>
+
                     </ul>
                 </div>
                 <div class="w3-container w3-half">
                     <ul class="w3-ul w3-card-4">
                         <li class="w3-bar w3-border-red w3-row">
-                            <button id="d20" class="w3-bar-item w3-button w3-half" onclick="rolld20('armatura');"><i class ="fa-solid fa-dice-d20"> Armatura</i></button>
+                            <button id="d20" class="w3-bar-item w3-button w3-half w3-large" onclick="rolld20('armatura');">
+                                <i class ="fa-solid fa-dice-d20"></i> Armatura
+                            </button>
                             <div class="w3-bar-item w3-half">
                                 <span id="armatura" class="w3-large w3-centered">0</span>
                             </div>
                         </li>
         
                         <li class="w3-bar w3-border-red w3-row">
-                            <button id="d20" class="w3-bar-item w3-button w3-half" onclick="rolld20('fisico');"><i class ="fa-solid fa-dice-d20"> Fisico</i></button>
+                            <button id="d20" class="w3-bar-item w3-button w3-half w3-large" onclick="rolld20('fisico');">
+                                <i class ="fa-solid fa-dice-d20"></i> Fisico
+                            </button>
                             <div class="w3-bar-item w3-half">
                                 <span id="fisico" class="w3-large w3-centered">0</span>
                             </div>
                         </li>
         
                         <li class="w3-bar w3-border-red w3-row">
-                            <button id="d20" class="w3-bar-item w3-button w3-half" onclick="rolld20('spirito');"><i class ="fa-solid fa-dice-d20">  Spirito</i></button>
+                            <button id="d20" class="w3-bar-item w3-button w3-half w3-large" onclick="rolld20('spirito');">
+                                <i class ="fa-solid fa-dice-d20"></i> Spirito
+                            </button>
                             <div class="w3-bar-item w3-half">
                                 <span id="spirito" class="w3-large w3-centered">0</span>
+                            </div>
+                        </li>
+
+                        <li class="w3-bar w3-border-red w3-row">
+                            <button id="d20" class="w3-bar-item w3-button w3-half w3-large" onclick="rolld20('liscio');">
+                                <i class ="fa-solid fa-dice-d20"></i> d20 Liscio
+                            </button>
+                            <div class="w3-bar-item w3-half">
+                                <span id="liscio" class="w3-large w3-centered"></span>
                             </div>
                         </li>
                     </ul>
@@ -130,6 +161,14 @@
                                 <input id="iniziativa_inpt" class="w3-input w3-border w3-round-large" type="text" placeholder="0" value="0">
                             </div>
                         </li>
+
+                        <li class="w3-bar w3-border-red">
+                            <label class="w3-bar-item">Fortuna</button>
+                            <div class="w3-bar-item">
+                                <input id="fortuna_inpt" class="w3-input w3-border w3-round-large" type="text" placeholder="0" value="0">
+                            </div>
+                        </li>
+
                     </ul>
                 </div>
                 <div class="w3-container w3-cell">

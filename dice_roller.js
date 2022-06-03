@@ -6,7 +6,12 @@ function diceroll(sides = 6){
 
 function rolld20(stat) {
     var roll = diceroll(20);
-    var modifier = parseInt(document.getElementById(stat).innerHTML);
+    var modifier = document.getElementById(stat).innerHTML;
+    if (!modifier){
+        var modifier = 0;
+    } else {
+        var modifier = parseInt(modifier);
+    }
     var result = roll + modifier;
     printNumber(result);
     printDetails(roll, modifier);
@@ -37,7 +42,12 @@ function printNumber(number) {
 
 function printDetails(roll, modifier){
     var fullresult = document.getElementById('fullresult');
-    fullresult.innerHTML = roll + " + " + modifier;
+    if (!modifier){
+        fullresult.innerHTML = roll;
+    } else {
+        fullresult.innerHTML = roll + " + " + modifier;
+    }
+    
 }
   
 
