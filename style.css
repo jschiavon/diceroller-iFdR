@@ -1,15 +1,24 @@
 * {
     font-family: Helvetica, Arial, sans-serif;
     text-align: center;
-    background-color: black;
-    color:white;
   }
+
+  .bg-image {
+    background-image: url("iFdR.jpg");
+    background-color: black;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain; /* Resize the background image to be conained in the container */
+  }
+
   #placeholder {
     height: 200px;
     width: 200px;
     padding: 30px;
     margin: auto;
     border: 1px solid red;
+    background-color: black;
+    opacity: 0.8;
     border-radius: 10px;  
     font-size:100px;
   }
@@ -20,6 +29,8 @@
     padding: 15px;
     margin: auto;
     border: 1px solid red;
+    background-color: black;
+    opacity: 0.8;
     border-radius: 10px;  
     font-size:20px;
   }
