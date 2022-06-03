@@ -4,123 +4,136 @@
     <title>LanciaDadi iFdR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     
 </head>  
 <body class="w3-black">
-    <div class="w3-text-white w3-black bg-image">
-        <header class="w3-section w3-mobile w3-black w3-opacity-min">
-            <h1 style="text-shadow:1px 1px 0 #444">
-                <b>Il Fuoco dei Re</b>
-            </h1>
-            <h3 style="text-shadow:1px 1px 0 #444">
-                Il LanciaDadi ufficiale della campagna
-            </h3>
-            <p>
-                by <a href="https://github.com/jschiavon">jschiavon</a> </br>
-                image by <a href="https://www.instagram.com/itspapaz/">@itspapaz</a>
-            </p>
+    <div class="w3-text-white bg-image">
+        <div class="w3-black w3-opacity-min">
+            <header class="w3-section w3-mobile">
+                <h1 style="text-shadow:1px 1px 0 #be0032">
+                    <b>Il Fuoco dei Re</b>
+                </h1>
+                <h3 style="text-shadow:1px 1px 0 #be0032">
+                    Il LanciaDadi ufficiale della campagna
+                </h3>
+                <p>
+                    by <a href="https://github.com/jschiavon">jschiavon</a> </br>
+                    image by <a href="https://www.instagram.com/itspapaz/">@itspapaz</a>
+                </p>
+                
+            </header>
             
-        </header>
+            <div class="w3-section w3-mobile">
+
+                <button onclick="document.getElementById('input_form').style.display='block'" class="w3-section w3-button w3-round w3-large w3-highway-red w3-opacity-min">
+                    Inserisci dati
+                </button>
+
+                <div class="w3-section w3-row">
+                    <ul class="w3-ul w3-card-4 w3-half">
+                        <li class="w3-bar w3-bottombar w3-round w3-border-red w3-row">
+                            <button id="d20" class="w3-bar-item w3-button w3-large" onclick="rolld20('attacco');">
+                                <i class ="fa-solid fa-dice-d20"></i> Attacco
+                            </button>
+                            <div class="w3-bar-item w3-half">
+                                <span id="attacco" class="w3-large w3-centered">0</span>
+                            </div>
+                        </li>
         
-        <div class="w3-section w3-mobile">
+                        <li class="w3-bar w3-bottombar w3-round w3-border-red w3-row">
+                            <button id="d20" class="w3-bar-item w3-button w3-large" onclick="rolld20('secondario');">
+                                <i class ="fa-solid fa-dice-d20"></i> Secondario
+                            </button>
+                            <div class="w3-bar-item w3-half">
+                                <span id="secondario" class=" w3-large w3-centered">0</span>
+                            </div>
+                        </li>
+        
+                        <li class="w3-bar w3-bottombar w3-round w3-border-red w3-row">
+                            <button id="d20" class="w3-bar-item w3-button w3-large" onclick="rolld20('iniziativa');">
+                                <i class ="fa-solid fa-dice-d20"></i> Iniziativa
+                            </button>
+                            <div class="w3-bar-item w3-half">
+                                <span id="iniziativa" class=" w3-large w3-centered">0</span>
+                            </div>
+                        </li>
 
-            <button onclick="document.getElementById('input_form').style.display='block'" class="w3-section w3-button w3-round w3-large w3-black w3-opacity-min">
-                Inserisci dati
-            </button>
+                        <li class="w3-bar w3-bottombar w3-round w3-border-red w3-row">
+                            <button id="d20" class="w3-bar-item w3-button w3-large" onclick="rolld20('armatura');">
+                                <i class ="fa-solid fa-dice-d20"></i> Armatura
+                            </button>
+                            <div class="w3-bar-item w3-half">
+                                <span id="armatura" class="w3-large w3-centered">0</span>
+                            </div>
+                        </li>
+        
+                        <li class="w3-bar w3-bottombar w3-round w3-border-red w3-row">
+                            <button id="d20" class="w3-bar-item w3-button w3-large" onclick="rolld20('fisico');">
+                                <i class ="fa-solid fa-dice-d20"></i> Fisico
+                            </button>
+                            <div class="w3-bar-item w3-half">
+                                <span id="fisico" class="w3-large w3-centered">0</span>
+                            </div>
+                        </li>
+        
+                        <li class="w3-bar w3-bottombar w3-round w3-border-red w3-row">
+                            <button id="d20" class="w3-bar-item w3-button w3-large" onclick="rolld20('spirito');">
+                                <i class ="fa-solid fa-dice-d20"></i> Spirito
+                            </button>
+                            <div class="w3-bar-item w3-half">
+                                <span id="spirito" class="w3-large w3-centered">0</span>
+                            </div>
+                        </li>
 
-            <div class="w3-section w3-row">
-                <ul class="w3-ul w3-card-4 w3-half">
-                    <li class="w3-bar w3-border-red w3-row w3-black w3-opacity-min">
-                        <button id="d20" class="w3-bar-item w3-button w3-large" onclick="rolld20('attacco');">
-                            <i class ="fa-solid fa-dice-d20"></i> Attacco
-                        </button>
-                        <div class="w3-bar-item w3-half">
-                            <span id="attacco" class="w3-large w3-centered">0</span>
-                        </div>
-                    </li>
-    
-                    <li class="w3-bar w3-border-red w3-row w3-black w3-opacity-min">
-                        <button id="d20" class="w3-bar-item w3-button w3-large" onclick="rolld20('secondario');">
-                            <i class ="fa-solid fa-dice-d20"></i> Secondario
-                        </button>
-                        <div class="w3-bar-item w3-half">
-                            <span id="secondario" class=" w3-large w3-centered">0</span>
-                        </div>
-                    </li>
-    
-                    <li class="w3-bar w3-border-red w3-row w3-black w3-opacity-min">
-                        <button id="d20" class="w3-bar-item w3-button w3-large" onclick="rolld20('iniziativa');">
-                            <i class ="fa-solid fa-dice-d20"></i> Iniziativa
-                        </button>
-                        <div class="w3-bar-item w3-half">
-                            <span id="iniziativa" class=" w3-large w3-centered">0</span>
-                        </div>
-                    </li>
+                        <li class="w3-bar w3-bottombar w3-round w3-border-red w3-row">
+                            <button id="d20" class="w3-bar-item w3-button w3-large" onclick="rolld20('fortuna');">
+                                <i class ="fa-solid fa-dice-d20"></i> Fortuna
+                            </button>
+                            <div class="w3-bar-item w3-half">
+                                <span id="fortuna" class=" w3-large w3-centered">0</span>
+                            </div>
+                        </li>
 
-                    <li class="w3-bar w3-border-red w3-row w3-black w3-opacity-min">
-                        <button id="d20" class="w3-bar-item w3-button w3-large" onclick="rolld20('fortuna');">
-                            <i class ="fa-solid fa-dice-d20"></i> Fortuna
-                        </button>
-                        <div class="w3-bar-item w3-half">
-                            <span id="fortuna" class=" w3-large w3-centered">0</span>
+                        <li class="w3-bar w3-bottombar w3-round w3-border-red w3-row">
+                            <button id="d20" class="w3-bar-item w3-button w3-large" onclick="rolld20('liscio');">
+                                <i class ="fa-solid fa-dice-d20"></i> d20 Liscio
+                            </button>
+                            <div class="w3-bar-item w3-half">
+                                <span id="liscio" class="w3-large w3-centered"></span>
+                            </div>
+                        </li>
+                    </ul>
+                
+                    
+                    <div class="w3-container w3-half">
+                        <div class="w3-section">
+                            <h4 style="text-shadow:1px 1px 0 #be0032">Roll:</h4>
+                            <p id="placeholder">
+                                
+                            </p>
                         </div>
-                    </li>
 
-                    <li class="w3-bar w3-border-red w3-row w3-black w3-opacity-min">
-                        <button id="d20" class="w3-bar-item w3-button w3-large" onclick="rolld20('armatura');">
-                            <i class ="fa-solid fa-dice-d20"></i> Armatura
-                        </button>
-                        <div class="w3-bar-item w3-half">
-                            <span id="armatura" class="w3-large w3-centered">0</span>
+                        <div class="w3-section">
+                            <p id="fullresult">
+                                
+                            </p>
                         </div>
-                    </li>
-    
-                    <li class="w3-bar w3-border-red w3-row w3-black w3-opacity-min">
-                        <button id="d20" class="w3-bar-item w3-button w3-large" onclick="rolld20('fisico');">
-                            <i class ="fa-solid fa-dice-d20"></i> Fisico
-                        </button>
-                        <div class="w3-bar-item w3-half">
-                            <span id="fisico" class="w3-large w3-centered">0</span>
-                        </div>
-                    </li>
-    
-                    <li class="w3-bar w3-border-red w3-row w3-black w3-opacity-min">
-                        <button id="d20" class="w3-bar-item w3-button w3-large" onclick="rolld20('spirito');">
-                            <i class ="fa-solid fa-dice-d20"></i> Spirito
-                        </button>
-                        <div class="w3-bar-item w3-half">
-                            <span id="spirito" class="w3-large w3-centered">0</span>
-                        </div>
-                    </li>
-
-                    <li class="w3-bar w3-border-red w3-row w3-black w3-opacity-min">
-                        <button id="d20" class="w3-bar-item w3-button w3-large" onclick="rolld20('liscio');">
-                            <i class ="fa-solid fa-dice-d20"></i> d20 Liscio
-                        </button>
-                        <div class="w3-bar-item w3-half">
-                            <span id="liscio" class="w3-large w3-centered"></span>
-                        </div>
-                    </li>
-                </ul>
-            
-                <div class="w3-section w3-half">
-                    <p id="placeholder">
-                        
-                    </p>
+                    </div>
                 </div>
 
-                <div class="w3-section w3-half">
-                    <p id="fullresult">
-                        
-                    </p>
-                </div>
+                
             </div>
-    
-        
         </div>
         
+    </div>
+
+    <div class="w3-section w3-mobile w3-black w3-opacity-min">
+        <h4 style="text-shadow:1px 1px 0 #be0032">Risultati:</h4>
+        <p id="history" class="w3-large">
+        </p>
     </div>
     
     <div id="input_form" class="w3-modal w3-mobile">
@@ -134,25 +147,25 @@
             <div class="w3-black w3-opacity-min">
                 <form class="w3-container w3-left-align">
 
-                    <input id="attacco_inpt" class="w3-input w3-border-red w3-round-large" type="text">
+                    <input id="attacco_inpt" class="w3-input w3-bottombar w3-border-red w3-round-large" type="text">
                     <label class="w3-text-red w3-large">Attacco</label>
                     
-                    <input id="secondario_inpt" class="w3-input w3-border-red w3-round-large" type="text">
+                    <input id="secondario_inpt" class="w3-input w3-bottombar w3-border-red w3-round-large" type="text">
                     <label class="w3-text-red w3-large">Secondario</label>
                     
-                    <input id="iniziativa_inpt" class="w3-input w3-border-red w3-round-large" type="text">
+                    <input id="iniziativa_inpt" class="w3-input w3-bottombar w3-border-red w3-round-large" type="text">
                     <label class="w3-text-red w3-large">Iniziativa</label>
                     
-                    <input id="armatura_inpt" class="w3-input w3-border-red w3-round-large" type="text">
+                    <input id="armatura_inpt" class="w3-input w3-bottombar w3-border-red w3-round-large" type="text">
                     <label class="w3-text-red w3-large">Armatura</label>
                     
-                    <input id="fisico_inpt" class="w3-input w3-border-red w3-round-large" type="text">
+                    <input id="fisico_inpt" class="w3-input w3-bottombar w3-border-red w3-round-large" type="text">
                     <label class="w3-text-red w3-large">Fisico</label>
                     
-                    <input id="spirito_inpt" class="w3-input w3-border-red w3-round-large" type="text">
+                    <input id="spirito_inpt" class="w3-input w3-bottombar w3-border-red w3-round-large" type="text">
                     <label class="w3-text-red w3-large">Spirito</label>
                     
-                    <input id="fortuna_inpt" class="w3-input w3-border-red w3-round-large" type="text">
+                    <input id="fortuna_inpt" class="w3-input w3-bottombar w3-border-red w3-round-large" type="text">
                     <label class="w3-text-red w3-large">Fortuna</label>
                     
                     </form>

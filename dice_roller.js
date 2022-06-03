@@ -15,6 +15,7 @@ function rolld20(stat) {
     var result = roll + modifier;
     printNumber(result);
     printDetails(roll, modifier);
+    printHistory(stat, result);
 }
   
 
@@ -52,6 +53,11 @@ function printDetails(roll, modifier){
         fullresult.innerHTML = roll + " + " + modifier;
     }
     
+}
+
+function printHistory(stat, result){
+    var history = document.getElementById('history');
+    history.innerHTML = stat + ": " + result + "\n" + history.innerHTML;
 }
   
 

@@ -16,9 +16,7 @@
     width: 200px;
     padding: 30px;
     margin: auto;
-    border: 1px solid red;
-    background-color: black;
-    opacity: 0.8;
+    border: 2px solid red;
     border-radius: 10px;  
     font-size:100px;
   }
@@ -26,11 +24,13 @@
   #fullresult {
     height: 50px;
     width: 50%;
-    padding: 15px;
+    padding: 12px;
     margin: auto;
-    border: 1px solid red;
-    background-color: black;
-    opacity: 0.8;
+    border: 2px solid red;
     border-radius: 10px;  
     font-size:20px;
+  }
+
+  #history {
+    white-space: pre-line;
   }
