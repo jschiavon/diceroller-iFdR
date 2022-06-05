@@ -26,10 +26,8 @@ function rolld20(stat) {
     printAverage(results);
 }
 
-
-
 function applyinputs(){
-    let valori = ["attacco", "secondario", "iniziativa", "armatura", "fisico", "spirito"];
+    let valori = ["attacco", "secondario", "iniziativa", "armatura", "fisico", "spirito", "fortuna"];
 
     let i, x, y;
     for (i = 0; i < valori.length; i++){
@@ -81,7 +79,6 @@ function printAverage(results) {
     avg = avg / results.length;
     average.innerHTML = Number(avg).toFixed(2);
 }
-
 
 function format_roll(result) {
     roll = result.rolled;
