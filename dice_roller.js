@@ -1,4 +1,15 @@
 const results = [];
+const valori = {
+    attacco: 0,
+    secondario: 0,
+    iniziativa: 0,
+    armatura: 0,
+    fisico: 0,
+    spirito: 0,
+    fortuna: 0
+}
+const names_valori = ["attacco", "secondario", "iniziativa", "armatura", "fisico", "spirito", "fortuna"];
+
 
 
 function diceroll(sides = 6){
@@ -26,22 +37,38 @@ function rolld20(stat) {
     printAverage(results);
 }
 
-function applyinputs(){
-    let valori = ["attacco", "secondario", "iniziativa", "armatura", "fisico", "spirito", "fortuna"];
 
-    let i, x, y;
-    for (i = 0; i < valori.length; i++){
-        x = document.getElementById(valori[i]);
-        y = document.getElementById(valori[i] + "_inpt");
-        if (!y.value){
-            x.innerHTML = "0";    
+// Functions to manage valori data structure
+
+function setValori() {
+    for (key in valori) {
+        if (!valori[key]) {
+            document.getElementById(key).innerHTML = "0";
         } else {
-            x.innerHTML = y.value;
-        }
+            document.getElementById(key).innerHTML = valori[key];
+        }    
+    }
+}
+
+function openDialog(){
+    for (key in valori) {
+        elem = document.getElementById(key + "_inpt")
+        if (!valori[key]) {
+            elem.placeholder = "Inserisci il valore di " + key + ", comprensivo di livello."    
+        } else {
+            elem.value = valori[key];
+        }       
+    }
+    document.getElementById('input_form').style.display='block';
+}
+
+function saveDialog(){
+    for (key in valori){
+        valori[key] = document.getElementById(key + "_inpt").value;
     }
     document.getElementById('input_form').style.display='none';
+    setValori();
 }  
-
 
 
 //Prints dice roll to the page
@@ -64,9 +91,9 @@ function printDetails(result) {
 function printHistory(results) {
     let history = document.getElementById('history');
     history.innerHTML = '';
-    for (let i = results.length -1; i >= 0;i--) {
-        history.innerHTML += format_roll(results[i]) + "\n";
-    }
+    results.forEach(function myFunc(value, index, array){
+        history.innerHTML += format_roll(value) + "\n";
+    });
 }
 
 function printAverage(results) {

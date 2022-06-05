@@ -28,7 +28,8 @@
             
             <div class="w3-section w3-mobile">
 
-                <button onclick="document.getElementById('input_form').style.display='block'" class="w3-section w3-button w3-round w3-large w3-highway-red w3-opacity-min">
+                <button onclick="openDialog();" 
+                        class="w3-section w3-button w3-round w3-large w3-highway-red w3-opacity-min">
                     Inserisci dati
                 </button>
 
@@ -155,32 +156,60 @@
             <div class="w3-black w3-opacity-min">
                 <form class="w3-container w3-left-align">
 
-                    <input id="attacco_inpt" class="w3-input w3-bottombar w3-border-red w3-round-large" type="text">
+                    <input id="attacco_inpt" 
+                        class="w3-input w3-animate-input w3-bottombar w3-border-red w3-round-large"
+                        type="number"
+                        style="width:30%"
+                        >
                     <label class="w3-text-red w3-large">Attacco</label>
                     
-                    <input id="secondario_inpt" class="w3-input w3-bottombar w3-border-red w3-round-large" type="text">
+                    <input id="secondario_inpt"
+                        class="w3-input w3-animate-input w3-bottombar w3-border-red w3-round-large"
+                        type="text"
+                        style="width:30%"
+                        >
                     <label class="w3-text-red w3-large">Secondario</label>
                     
-                    <input id="iniziativa_inpt" class="w3-input w3-bottombar w3-border-red w3-round-large" type="text">
+                    <input id="iniziativa_inpt"
+                        class="w3-input w3-animate-input w3-bottombar w3-border-red w3-round-large"
+                        type="text"
+                        style="width:30%"
+                        >
                     <label class="w3-text-red w3-large">Iniziativa</label>
                     
-                    <input id="armatura_inpt" class="w3-input w3-bottombar w3-border-red w3-round-large" type="text">
+                    <input id="armatura_inpt" 
+                        class="w3-input w3-animate-input w3-bottombar w3-border-red w3-round-large"
+                        type="text"
+                        style="width:30%"
+                        >
                     <label class="w3-text-red w3-large">Armatura</label>
                     
-                    <input id="fisico_inpt" class="w3-input w3-bottombar w3-border-red w3-round-large" type="text">
+                    <input id="fisico_inpt"
+                        class="w3-input w3-animate-input w3-bottombar w3-border-red w3-round-large"
+                        type="text"
+                        style="width:30%"
+                        >
                     <label class="w3-text-red w3-large">Fisico</label>
                     
-                    <input id="spirito_inpt" class="w3-input w3-bottombar w3-border-red w3-round-large" type="text">
+                    <input id="spirito_inpt" 
+                        class="w3-input w3-animate-input w3-bottombar w3-border-red w3-round-large"
+                        type="text"
+                        style="width:30%"
+                        >
                     <label class="w3-text-red w3-large">Spirito</label>
                     
-                    <input id="fortuna_inpt" class="w3-input w3-bottombar w3-border-red w3-round-large" type="text">
+                    <input id="fortuna_inpt" 
+                        class="w3-input w3-animate-input w3-bottombar w3-border-red w3-round-large"
+                        type="text"
+                        style="width:30%"
+                        >
                     <label class="w3-text-red w3-large">Fortuna</label>
                     
                     </form>
             </div>
             
             <footer class="w3-container">
-                <button class="w3-button w3-large w3-red w3-round-large w3-opacity-min" onclick="applyinputs();">Salva</button>
+                <button class="w3-button w3-large w3-red w3-round-large w3-opacity-min" onclick="saveDialog();">Salva</button>
             </footer>
   
         </div>
