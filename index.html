@@ -4,7 +4,7 @@
     <title>LanciaDadi iFdR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-vivid.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     
@@ -27,14 +27,22 @@
             </header>
             
             <div class="w3-section w3-mobile">
-
-                <button onclick="openDialog();" 
-                        class="w3-section w3-button w3-round w3-large w3-highway-red w3-opacity-min">
-                    Inserisci dati
-                </button>
-
                 <div class="w3-section w3-row">
+                    
                     <ul class="w3-ul w3-card-4 w3-half">
+                        <div class="w3-section w3-row">
+                            <button onclick="exportValori();" class="w3-section w3-third w3-button w3-round w3-large w3-vivid-reddish-purple">
+                                Esporta Valori
+                            </button>
+                            <button onclick="importValori();" class="w3-section w3-third w3-button w3-round w3-large w3-vivid-reddish-orange">
+                                Importa Valori
+                            </button>
+                            <button onclick="openDialog();" class="w3-section w3-third w3-button w3-round w3-large w3-vivid-red">
+                                Inserisci Valori
+                            </button>
+                        </div>
+                        
+    
                         <li class="w3-bar w3-bottombar w3-round w3-border-red w3-row">
                             <button id="d20" class="w3-bar-item w3-button w3-large" onclick="rolld20('attacco');">
                                 <i class ="fa-solid fa-dice-d20"></i> Attacco
@@ -146,14 +154,14 @@
     </div>
     
     <div id="input_form" class="w3-modal w3-mobile">
-        <div class="w3-modal-content w3-animate-zoom bg-image">            
-            <header class="w3-container">
-                <span onclick="document.getElementById('input_form').style.display='none'"
-                class="w3-button w3-display-topright">&times;</span>
-                <h2>Inserisci dati del PG</h2>
-            </header>
-
+        <div class="w3-modal-content w3-animate-zoom bg-image">
             <div class="w3-black w3-opacity-min">
+                <header class="w3-container">
+                    <span onclick="document.getElementById('input_form').style.display='none'"
+                    class="w3-button w3-display-topright"><i class="fa-solid fa-circle-xmark"></i></span>
+                    <h2>Inserisci dati del PG</h2>
+                </header>
+
                 <form class="w3-container w3-left-align">
 
                     <input id="attacco_inpt" 
@@ -205,13 +213,20 @@
                         >
                     <label class="w3-text-red w3-large">Fortuna</label>
                     
-                    </form>
-            </div>
-            
-            <footer class="w3-container">
-                <button class="w3-button w3-large w3-red w3-round-large w3-opacity-min" onclick="saveDialog();">Salva</button>
-            </footer>
-  
+                </form>
+                
+                <footer class="w3-container w3-row">
+                    <div class="w3-container w3-third">
+
+                    </div>
+                    <button class="w3-button w3-third w3-large w3-vivid-red w3-round-large" onclick="document.getElementById('input_form').style.display='none'">
+                        <i class="fa-solid fa-xmark"></i> Annulla
+                    </button>
+                    <button class="w3-button w3-third w3-large w3-vivid-green w3-round-large" onclick="applyDialog();">
+                        <i class="fa-solid fa-check"></i> Applica
+                    </button>
+                </footer>
+            </div>    
         </div>
     </div>
 

@@ -50,7 +50,7 @@ function setValori() {
     }
 }
 
-function openDialog(){
+function openDialog() {
     for (key in valori) {
         elem = document.getElementById(key + "_inpt")
         if (!valori[key]) {
@@ -62,13 +62,32 @@ function openDialog(){
     document.getElementById('input_form').style.display='block';
 }
 
-function saveDialog(){
+function applyDialog() {
     for (key in valori){
-        valori[key] = document.getElementById(key + "_inpt").value;
+        val = document.getElementById(key + "_inpt").value;
+        if (!val) {
+            valori[key] = 0;
+        } else {
+            valori[key] = val;
+        }
     }
     document.getElementById('input_form').style.display='none';
     setValori();
-}  
+}
+
+function exportValori() {
+    for (key in valori) {
+        localStorage.setItem(key, valori[key]);
+    }
+}
+
+function importValori() {
+    for (key in valori) {
+        console.log(key + ": " + valori[key] + " <- " + localStorage[key]);
+        valori[key] = localStorage[key];
+    }
+    setValori();
+}
 
 
 //Prints dice roll to the page
