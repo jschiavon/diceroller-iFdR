@@ -4,8 +4,10 @@
     <title>LanciaDadi iFdR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-vivid.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"> 
 </head>  
 
@@ -63,15 +65,15 @@
     <div class="bg-image">
         <div class="w3-text-white bg-opacity-layer">
             <header class="w3-section w3-mobile">
-                <h1 class="shadowed">
-                    <b>Il Fuoco dei Re</b>
+                <h1 class="shadowed bold huge">
+                    Il Fuoco dei Re
                 </h1>
                 <h3 class="shadowed">
                     Il LanciaDadi ufficiale della campagna
                 </h3>
                 <p>
                     by <a href="https://jschiavon.github.io">jschiavon</a> </br>
-                    image by <a href="https://www.instagram.com/itspapaz/">@itspapaz</a>
+                    immagine by <a href="https://www.instagram.com/itspapaz/">@itspapaz</a> - campagna by <a href="https://www.dmsguild.com/browse.php?author=Damiano%20Pecorari">Damiano Pecorari</a>
                 </p>
                 
             </header>
@@ -80,28 +82,17 @@
                 <div class="w3-section w3-row">
                     
                     <div class="w3-container w3-half">
-                        <div class="w3-section import-grid">
-                            <button onclick="exportValori();" class="import bottone">
-                                Esporta Valori
-                            </button>
-                            <button onclick="importValori();" class="export bottone">
-                                Importa Valori
-                            </button>
-                            <button onclick="openDialog();" class="set bottone">
-                                Inserisci Valori
-                            </button>
-                        </div>
                         
-                        <div class="w3-section w3-row">
+                        <div class="w3-section w3-row grid">
                             <div class="w3-half">
                                 <div class="lvl-esc-grid">
-                                    <p id="livello" class="main w3-round-large w3-xxxlarge">
+                                    <p id="livello" class="main shadowed bold huge">
                                         1
                                     </p>
                                     <button class="bottone minus" onclick="changeLevel('-');">
                                         <i class="fa-solid fa-square-minus"></i>
                                     </button>
-                                    <p class="w3-large label shadowed">Livello</p>
+                                    <p class="w3-xlarge label shadowed">Livello</p>
                                     <button class="bottone plus" onclick="changeLevel('+');">
                                         <i class="fa-solid fa-square-plus"></i>
                                     </button>
@@ -110,13 +101,13 @@
                             
                             <div class="w3-half">
                                 <div class="lvl-esc-grid">
-                                    <p id="escalation" class="main w3-round-large w3-xxxlarge">
+                                    <p id="escalation" class="main shadowed bold huge">
                                         0
                                     </p>
                                     <button class="bottone minus" onclick="changeEscalation('-');">
                                         <i class="fa-solid fa-square-minus"></i>
                                     </button>
-                                    <p class="w3-large label shadowed">Escalation</p>
+                                    <p class="w3-xlarge label shadowed">Escalation</p>
                                     <button class="bottone plus" onclick="changeEscalation('+');">
                                         <i class="fa-solid fa-square-plus"></i>
                                     </button>
@@ -124,7 +115,7 @@
                             </div>
                         </div>
                             
-                        <div class="w3-section valori-grid">
+                        <div class="w3-section valori-grid grid">
                             <button id="d20" class="bottone att" onclick="rolld20('attacco', livello=true, escalation=true);">
                                 <svg class="icon-svg" width="25" height="25" version="2.0">
                                     <use href="#dice-d20"/>
@@ -162,7 +153,7 @@
                             </button>
                         </div>
                         
-                        <div class="w3-section flat-dice-grid">
+                        <div class="w3-section flat-dice-grid grid">
                             <button id="d20" class="bottone d20" onclick="rollDice(sides=20);">
                                 <svg class="icon-svg" width="25" height="25" version="2.0">
                                     <use href="#dice-d20"/>
@@ -211,12 +202,25 @@
                                 </svg> d2
                             </button>
                         </div>
+
+                        <div class="w3-section import-grid grid">
+                            <button onclick="exportValori();" class="import bottone">
+                                <span>Esporta Valori</span>
+                            </button>
+                            <button onclick="importValori();" class="export bottone">
+                                <span>Importa Valori</span>
+                            </button>
+                            <button onclick="openDialog();" class="set bottone">
+                                <span>Modifica Valori</span>
+                            </button>
+                        </div>
+                        
                     </div>
                     
                     <div class="w3-container w3-half">
                         <div class="w3-section">
                             <h4 class="shadowed">Risultato:</h4>
-                            <p id="placeholder">
+                            <p id="placeholder" class="shadowed bold huge">
                                 
                             </p>
                         </div>
@@ -254,7 +258,7 @@
                 <header class="w3-container">
                     <span onclick="document.getElementById('input_form').style.display='none'"
                     class="w3-button w3-display-topright"><i class="fa-solid fa-circle-xmark"></i></span>
-                    <h2>Inserisci dati del PG</h2>
+                    <h3  class="shadowed w3-xlarge">Inserisci dati del PG</h2>
                 </header>
 
                 <div class="input-valori-grid">
@@ -262,37 +266,37 @@
                         class="input iatk"
                         type="number"
                         >
-                    <p class="w3-large iatkl shadowed">Attacco</p>
+                    <p class="w3-xlarge iatkl shadowed">Attacco</p>
 
                     <input id="secondario_inpt"
                         class="input isec"
                         type="number"
                         >
-                    <p class="shadowed w3-large isecl">Secondario</p>
+                    <p class="shadowed w3-xlarge isecl">Secondario</p>
                     
                     <input id="iniziativa_inpt"
                         class="input iini"
                         type="number"
                         >
-                    <p class="shadowed w3-large iinil">Iniziativa</p>
+                    <p class="shadowed w3-xlarge iinil">Iniziativa</p>
                     
                     <input id="armatura_inpt" 
                         class="input iarm"
                         type="number"
                         >
-                    <p class="shadowed w3-large iarml">Armatura</p>
+                    <p class="shadowed w3-xlarge iarml">Armatura</p>
                     
                     <input id="fisico_inpt"
                         class="input ifis"
                         type="number"
                         >
-                    <p class="shadowed w3-large ifisl">Fisico</p>
+                    <p class="shadowed w3-xlarge ifisl">Fisico</p>
                     
                     <input id="spirito_inpt" 
                         class="input ispi"
                         type="number"
                         >
-                    <p class="shadowed w3-large ispil">Spirito</p>
+                    <p class="shadowed w3-xlarge ispil">Spirito</p>
                 </div>
 
                 <footer class="w3-section import-grid">

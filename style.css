@@ -1,5 +1,5 @@
 * {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
     text-align: center;
   }
 
@@ -12,7 +12,7 @@
 }
 
 .bg-opacity-layer {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .import-grid {
@@ -82,21 +82,51 @@
   border-color: whitesmoke;
   border-style: solid;
   border-radius: 5px;
-  opacity: 0.8;
+  opacity: 0.75;
   font-size: x-large;
+  transition: all 0.3s;
 }
+
 .bottone:hover{
   background-color: darkred;
   color: whitesmoke;
   border-color: darkred;
+  letter-spacing: 2px;
+  word-spacing: 15px;
+  transition: all 0.3s;
 }
 
 .bottone:hover .icon-svg {
   fill: whitesmoke;
+  transition: all 0.3s;
+}
+
+.bottone::after {
+  transition: all 0.3s;
 }
 
 .shadowed {
-  text-shadow:1px 1px 0 darkred;
+  text-shadow:1px 2px 0 darkred;
+}
+
+.bold {
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.huge {
+  padding: 4px;
+  margin: auto;
+  font-size: 80px;
+}
+
+.huge.shadowed{
+  text-shadow:2px 4px 0 darkred;
+}
+
+.grid {
+  /*border: 2px solid darkred;
+  border-radius: 10px;*/
 }
 
 #placeholder {
@@ -105,8 +135,7 @@
   padding: 30px;
   margin: auto;
   border: 2px solid darkred;
-  border-radius: 10px;  
-  font-size:100px;
+  border-radius: 10px;
 }
 
 #fullresult {
@@ -147,12 +176,16 @@
   padding: 8px;
   margin: 6px;
   background-color: whitesmoke;
+  opacity: 0.5;
   color: black;
   border-color: whitesmoke;
   border-style: solid;
   border-radius: 5px;
 }
 
+.input:focus {
+  opacity: 0.9;
+}
 
 .input-valori-grid {
   display: grid;
@@ -174,3 +207,4 @@
 .iarml { grid-area: 4 / 1 / 5 / 2; }
 .ifisl { grid-area: 5 / 1 / 6 / 2; }
 .ispil { grid-area: 6 / 1 / 7 / 2; }
+
