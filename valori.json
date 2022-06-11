@@ -1,0 +1,11 @@
+{
+    "valori": {
+        "attacco": 0,
+        "secondario": 0,
+        "iniziativa": 0,
+        "armatura": 0,
+        "fisico": 0,
+        "spirito": 0,
+        "fortuna": 0
+    }
+}
