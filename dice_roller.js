@@ -56,9 +56,11 @@ function rollDice(sides=20, livello=false, stat="", escalation=false) {
     };
     results.push(result);
     printNumber(result);
-    printDetails(result);
-    printHistory(results);
-    printAverage(results);
+    if (sides=20) {
+        printDetails(result);
+        printHistory(results);
+        printAverage(results);
+    }
 }
 
 
@@ -177,8 +179,6 @@ function changeLevel(mode='+') {
     }
 }
 
-
-
 // Prints dice roll to the page
 
 function printNumber(result) {
@@ -220,9 +220,15 @@ function printAverage(results) {
             cnt++;
         }
     }
-    avg = Number(avg / cnt);
-    average.innerText = avg.toFixed(2);
-    average_title.innerText = "Media di " + cnt + "d20:";
+    if (cnt > 0) {
+        avg = Number(avg / cnt);
+        average.innerText = avg.toFixed(2);
+        average_title.innerText = "Media di " + cnt + "d20:";
+    }
+    else {
+        average.innerText = "";
+        average_title.innerText = "Media d20";
+    }
 }
 
 function format_roll(result) {
@@ -241,13 +247,11 @@ function format_roll(result) {
     if (esc) {
         res += " + " + esc;
     }
-    
     if (mod || lvl || esc) {
         res += " = " + tot;
     }
     return res;
 }
-
 
 
 // FileInputOutput
@@ -294,8 +298,6 @@ function readValori() {
 
     }
 }
-
-
 
 // Save stuff
 function saveValori(){
